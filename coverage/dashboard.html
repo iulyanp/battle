@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /media/work/web-apps/emag/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/nv.d3.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">/media/work/web-apps/emag/src</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BattleManagerCommand.php.html#24">BattleManagerCommand</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BattleManagerCommand.php.html#24">BattleManagerCommand</a></td><td class="text-right">306</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BattleManagerCommand.php.html#36"><abbr title="BattleManagerCommand::configure">configure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BattleManagerCommand.php.html#58"><abbr title="BattleManagerCommand::execute">execute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BattleManagerCommand.php.html#102"><abbr title="BattleManagerCommand::initBattle">initBattle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BattleManagerCommand.php.html#138"><abbr title="BattleManagerCommand::battle">battle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="BattleManagerCommand.php.html#165"><abbr title="BattleManagerCommand::addNewSkill">addNewSkill</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Defence.php.html#41"><abbr title="Defence::validate">validate</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Entity/Health.php.html#48"><abbr title="Health::validate">validate</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Entity/Luck.php.html#41"><abbr title="Luck::validate">validate</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Entity/Speed.php.html#42"><abbr title="Speed::validate">validate</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Entity/Strength.php.html#41"><abbr title="Strength::validate">validate</abbr></a></td><td class="text-right">83%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="BattleManagerCommand.php.html#102"><abbr title="BattleManagerCommand::initBattle">initBattle</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="BattleManagerCommand.php.html#138"><abbr title="BattleManagerCommand::battle">battle</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="BattleManagerCommand.php.html#165"><abbr title="BattleManagerCommand::addNewSkill">addNewSkill</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Entity/Defence.php.html#41"><abbr title="Defence::validate">validate</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Entity/Health.php.html#48"><abbr title="Health::validate">validate</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Entity/Luck.php.html#41"><abbr title="Luck::validate">validate</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Entity/Speed.php.html#42"><abbr title="Speed::validate">validate</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Entity/Strength.php.html#41"><abbr title="Strength::validate">validate</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="BattleManagerCommand.php.html#58"><abbr title="BattleManagerCommand::execute">execute</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 4.0.3</a> using <a href="https://secure.php.net/" target="_top">PHP 7.0.13-1+deb.sury.org~xenial+1</a> with <a href="https://xdebug.org/">Xdebug 2.4.1</a> and <a href="https://phpunit.de/">PHPUnit 5.6.7</a> at Thu Dec 1 20:30:12 UTC 2016.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/holder.min.js" type="text/javascript"></script>
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([1,0,0,0,0,0,0,0,0,0,5,6], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([5,0,0,0,0,0,0,0,0,5,0,61], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,17,"<a href=\"BattleManagerCommand.php.html#24\">BattleManagerCommand<\/a>"],[100,13,"<a href=\"BattleResult.php.html#12\">BattleResult<\/a>"],[100,2,"<a href=\"Entity\/Beast.php.html#8\">Beast<\/a>"],[90,9,"<a href=\"Entity\/Defence.php.html#9\">Defence<\/a>"],[91.666666666667,10,"<a href=\"Entity\/Health.php.html#9\">Health<\/a>"],[100,8,"<a href=\"Entity\/Hero.php.html#9\">Hero<\/a>"],[90,9,"<a href=\"Entity\/Luck.php.html#9\">Luck<\/a>"],[100,37,"<a href=\"Entity\/Player.php.html#9\">Player<\/a>"],[100,17,"<a href=\"Entity\/Skill.php.html#9\">Skill<\/a>"],[90,9,"<a href=\"Entity\/Speed.php.html#9\">Speed<\/a>"],[90,9,"<a href=\"Entity\/Strength.php.html#9\">Strength<\/a>"],[100,4,"<a href=\"OutputTrait.php.html#5\">OutputTrait<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"BattleManagerCommand.php.html#36\">BattleManagerCommand::configure<\/a>"],[0,2,"<a href=\"BattleManagerCommand.php.html#58\">BattleManagerCommand::execute<\/a>"],[0,5,"<a href=\"BattleManagerCommand.php.html#102\">BattleManagerCommand::initBattle<\/a>"],[0,5,"<a href=\"BattleManagerCommand.php.html#138\">BattleManagerCommand::battle<\/a>"],[0,4,"<a href=\"BattleManagerCommand.php.html#165\">BattleManagerCommand::addNewSkill<\/a>"],[100,3,"<a href=\"BattleResult.php.html#38\">BattleResult::__construct<\/a>"],[100,5,"<a href=\"BattleResult.php.html#56\">BattleResult::getRoundResult<\/a>"],[100,1,"<a href=\"BattleResult.php.html#95\">BattleResult::anonymous function<\/a>"],[100,4,"<a href=\"BattleResult.php.html#119\">BattleResult::getResult<\/a>"],[100,1,"<a href=\"Entity\/Beast.php.html#10\">Beast::defend<\/a>"],[100,1,"<a href=\"Entity\/Beast.php.html#15\">Beast::strikeWithSkills<\/a>"],[100,1,"<a href=\"Entity\/Defence.php.html#21\">Defence::__construct<\/a>"],[100,1,"<a href=\"Entity\/Defence.php.html#30\">Defence::value<\/a>"],[83.333333333333,7,"<a href=\"Entity\/Defence.php.html#41\">Defence::validate<\/a>"],[100,1,"<a href=\"Entity\/Health.php.html#21\">Health::__construct<\/a>"],[100,1,"<a href=\"Entity\/Health.php.html#27\">Health::set<\/a>"],[100,1,"<a href=\"Entity\/Health.php.html#37\">Health::value<\/a>"],[83.333333333333,7,"<a href=\"Entity\/Health.php.html#48\">Health::validate<\/a>"],[100,4,"<a href=\"Entity\/Hero.php.html#18\">Hero::strikeWithSkills<\/a>"],[100,4,"<a href=\"Entity\/Hero.php.html#39\">Hero::defend<\/a>"],[100,1,"<a href=\"Entity\/Luck.php.html#21\">Luck::__construct<\/a>"],[100,1,"<a href=\"Entity\/Luck.php.html#30\">Luck::value<\/a>"],[83.333333333333,7,"<a href=\"Entity\/Luck.php.html#41\">Luck::validate<\/a>"],[100,2,"<a href=\"Entity\/Player.php.html#36\">Player::__construct<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#52\">Player::getName<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#60\">Player::getHealth<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#68\">Player::getStrength<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#76\">Player::getDefence<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#84\">Player::getSpeed<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#92\">Player::getLuck<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#100\">Player::isLucky<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#108\">Player::wasLucky<\/a>"],[100,2,"<a href=\"Entity\/Player.php.html#116\">Player::calculateHeathLeft<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#134\">Player::setDamage<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#144\">Player::getDamage<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#152\">Player::getReadyToAttack<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#162\">Player::prepareToAttack<\/a>"],[100,2,"<a href=\"Entity\/Player.php.html#172\">Player::isReadyToAttack<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#182\">Player::calculateDefaultDamage<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#190\">Player::getSkills<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#200\">Player::addSkill<\/a>"],[100,2,"<a href=\"Entity\/Player.php.html#210\">Player::getAttackSkills<\/a>"],[100,2,"<a href=\"Entity\/Player.php.html#218\">Player::getDefenceSkills<\/a>"],[100,2,"<a href=\"Entity\/Player.php.html#228\">Player::attack<\/a>"],[100,2,"<a href=\"Entity\/Player.php.html#246\">Player::usedAttackSkills<\/a>"],[100,2,"<a href=\"Entity\/Player.php.html#251\">Player::usedDefendSkills<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#256\">Player::getAttackUsedSkills<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#261\">Player::getDefendUsedSkills<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#269\">Player::__toString<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#287\">Player::strike<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#296\">Player::strikeWithSkills<\/a>"],[100,1,"<a href=\"Entity\/Player.php.html#298\">Player::defend<\/a>"],[100,1,"<a href=\"Entity\/Skill.php.html#30\">Skill::__construct<\/a>"],[100,1,"<a href=\"Entity\/Skill.php.html#43\">Skill::getName<\/a>"],[100,1,"<a href=\"Entity\/Skill.php.html#51\">Skill::getType<\/a>"],[100,1,"<a href=\"Entity\/Skill.php.html#59\">Skill::getProbability<\/a>"],[100,1,"<a href=\"Entity\/Skill.php.html#67\">Skill::getFormula<\/a>"],[100,1,"<a href=\"Entity\/Skill.php.html#72\">Skill::wasUsed<\/a>"],[100,1,"<a href=\"Entity\/Skill.php.html#80\">Skill::isActive<\/a>"],[100,4,"<a href=\"Entity\/Skill.php.html#92\">Skill::getDamageWithActiveSkills<\/a>"],[100,6,"<a href=\"Entity\/Skill.php.html#124\">Skill::validate<\/a>"],[100,1,"<a href=\"Entity\/Speed.php.html#21\">Speed::__construct<\/a>"],[100,1,"<a href=\"Entity\/Speed.php.html#31\">Speed::value<\/a>"],[83.333333333333,7,"<a href=\"Entity\/Speed.php.html#42\">Speed::validate<\/a>"],[100,1,"<a href=\"Entity\/Strength.php.html#21\">Strength::__construct<\/a>"],[100,1,"<a href=\"Entity\/Strength.php.html#30\">Strength::value<\/a>"],[83.333333333333,7,"<a href=\"Entity\/Strength.php.html#41\">Strength::validate<\/a>"],[100,1,"<a href=\"OutputTrait.php.html#12\">OutputTrait::write<\/a>"],[100,1,"<a href=\"OutputTrait.php.html#22\">OutputTrait::comment<\/a>"],[100,1,"<a href=\"OutputTrait.php.html#32\">OutputTrait::info<\/a>"],[100,1,"<a href=\"OutputTrait.php.html#42\">OutputTrait::error<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

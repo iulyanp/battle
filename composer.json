@@ -1,0 +1,27 @@
+{
+    "name": "iulyanp/battle",
+    "description": "Orderus battle",
+    "require": {
+        "php": ">=5.6",
+        "symfony/console": "~2.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.1",
+        "phpunit/phpunit": "^5.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Popa Iulian",
+            "email": "iulyanpopa@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Iulyanp\\Battle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "Iulyanp\\Battle\\Tests\\": "tests/" }
+    }
+}
