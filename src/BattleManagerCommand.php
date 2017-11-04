@@ -7,7 +7,7 @@ use Iulyanp\Battle\Entity\Defence;
 use Iulyanp\Battle\Entity\Health;
 use Iulyanp\Battle\Entity\Hero;
 use Iulyanp\Battle\Entity\Luck;
-use Iulyanp\Battle\Entity\PlayerInterface;
+use Iulyanp\Battle\Entity\Player;
 use Iulyanp\Battle\Entity\Skill;
 use Iulyanp\Battle\Entity\Speed;
 use Iulyanp\Battle\Entity\Strength;
@@ -26,7 +26,6 @@ class BattleManagerCommand extends Command
     use OutputTrait;
 
     const BATTLE_ROUNDS = 20;
-
     /**
      * @var InputInterface
      */
@@ -102,10 +101,10 @@ EOT
     }
 
     /**
-     * @param PlayerInterface $hero
-     * @param PlayerInterface $beast
+     * @param Player $hero
+     * @param Player $beast
      */
-    public function initBattle(PlayerInterface $hero, PlayerInterface $beast)
+    public function initBattle(Player $hero, Player $beast)
     {
         $this->info('Battle start!');
 
@@ -138,10 +137,10 @@ EOT
     }
 
     /**
-     * @param PlayerInterface $hero
-     * @param PlayerInterface $beast
+     * @param Player $hero
+     * @param Player $beast
      */
-    public function battle(PlayerInterface $hero, PlayerInterface $beast)
+    public function battle(Player $hero, Player $beast)
     {
         $i = 0;
 
@@ -158,7 +157,9 @@ EOT
             $battleResult->getRoundResult(++$i);
         }
 
-        return $battleResult->getResult();
+        if (isset($battleResult)) {
+            $battleResult->getResult();
+        }
     }
 
     /**
@@ -190,8 +191,8 @@ EOT
             $typeQuestion = new ChoiceQuestion(
                 'What type of skill?',
                 [
-                    Skill::ATTACK  => 'attack',
-                    Skill::DEFENCE => 'defence'
+                    Skill::ATTACK => 'attack',
+                    Skill::DEFENCE => 'defence',
                 ],
                 Skill::ATTACK
             );

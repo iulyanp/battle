@@ -21,6 +21,7 @@ class Strength
     public function __construct($minStrength, $maxStrength)
     {
         $this->validate($minStrength, $maxStrength);
+
         $this->strength = mt_rand($minStrength, $maxStrength);
     }
 

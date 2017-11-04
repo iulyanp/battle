@@ -23,7 +23,7 @@ class Beast extends Player
      *
      * @return mixed
      */
-    protected function strikeWithSkills($player, $damage)
+    protected function strikeWithSkills(PlayerInterface $player, $damage)
     {
         return $damage;
     }

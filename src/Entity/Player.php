@@ -47,7 +47,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
@@ -55,7 +55,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return array
+     * @return Health
      */
     public function getHealth()
     {
@@ -63,7 +63,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return array
+     * @return Strength
      */
     public function getStrength()
     {
@@ -71,7 +71,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return array
+     * @return Defence
      */
     public function getDefence()
     {
@@ -79,7 +79,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return array
+     * @return Speed
      */
     public function getSpeed()
     {
@@ -87,7 +87,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return array
+     * @return Luck
      */
     public function getLuck()
     {
@@ -103,7 +103,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
     public function wasLucky()
     {
@@ -129,7 +129,7 @@ abstract class Player implements PlayerInterface
     /**
      * @param int $damage
      *
-     * @return Player
+     * @return $this
      */
     public function setDamage($damage)
     {
@@ -139,7 +139,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getDamage()
     {
@@ -147,7 +147,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return mixed
+     * @return bool
      */
     public function getReadyToAttack()
     {
@@ -155,9 +155,9 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @param mixed $readyToAttack
+     * @param bool $readyToAttack
      *
-     * @return Player
+     * @return $this
      */
     public function prepareToAttack($readyToAttack = true)
     {
@@ -185,7 +185,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return mixed
+     * @return array
      */
     public function getSkills()
     {
@@ -205,7 +205,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return mixed
+     * @return array
      */
     public function getAttackSkills()
     {
@@ -213,7 +213,7 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @return mixed
+     * @return array
      */
     public function getDefenceSkills()
     {
@@ -221,11 +221,11 @@ abstract class Player implements PlayerInterface
     }
 
     /**
-     * @param PlayerInterface $player
+     * @param Player $player
      *
      * @return $this
      */
-    public function attack(PlayerInterface $player)
+    public function attack(Player $player)
     {
         $player->prepareToAttack();
         $this->prepareToAttack(false);
@@ -279,12 +279,16 @@ abstract class Player implements PlayerInterface
         );
     }
 
+    protected abstract function strikeWithSkills(PlayerInterface $player, $damage);
+
+    protected abstract function defend($damage);
+
     /**
-     * @param PlayerInterface $player
+     * @param Player $player
      *
      * @return number
      */
-    private function strike(PlayerInterface $player)
+    private function strike(Player $player)
     {
         $defaultDamage = $player->calculateDefaultDamage($this->getStrength()->value());
 
@@ -292,8 +296,4 @@ abstract class Player implements PlayerInterface
 
         return $player->defend($damage);
     }
-
-    protected abstract function strikeWithSkills($player, $damage);
-
-    protected abstract function defend($damage);
 }

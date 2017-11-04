@@ -3,6 +3,8 @@
 namespace Iulyanp\Battle;
 
 use Iulyanp\Battle\Entity\Player;
+use Iulyanp\Battle\Entity\PlayerInterface;
+use Iulyanp\Battle\Entity\Skill;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
@@ -12,17 +14,14 @@ use Symfony\Component\Console\Output\OutputInterface;
 class BattleResult implements BattleResultInterface
 {
     use OutputTrait;
-
     /**
      * @var OutputInterface
      */
     private $output;
-
     /**
      * @var Player
      */
     private $attacker;
-
     /**
      * @var Player
      */
@@ -31,11 +30,11 @@ class BattleResult implements BattleResultInterface
     /**
      * BattleResult constructor.
      *
-     * @param Player $player1
-     * @param Player $player2
+     * @param PlayerInterface $player1
+     * @param PlayerInterface $player2
      * @param OutputInterface $output
      */
-    public function __construct(Player $player1, Player $player2, OutputInterface $output)
+    public function __construct(PlayerInterface $player1, PlayerInterface $player2, OutputInterface $output)
     {
         $this->output = $output;
 
@@ -67,7 +66,8 @@ class BattleResult implements BattleResultInterface
         $this->write('------------------------------');
 
         if ($this->attacker->usedAttackSkills()) {
-            $usedSkills = array_map(function($skill){
+            $usedSkills = array_map(function ($skill) {
+                /** @var $skill Skill */
                 return $skill->getName();
             }, $this->attacker->getAttackUsedSkills());
 
@@ -92,7 +92,8 @@ class BattleResult implements BattleResultInterface
 
         if ($this->defender->usedDefendSkills() && !$this->defender->wasLucky()) {
 
-            $usedSkills = array_map(function($skill){
+            $usedSkills = array_map(function ($skill) {
+                /** @var $skill Skill */
                 return $skill->getName();
             }, $this->defender->getDefendUsedSkills());
 
@@ -118,7 +119,7 @@ class BattleResult implements BattleResultInterface
      */
     public function getResult()
     {
-        $this->write(PHP_EOL.'==============================');
+        $this->write(PHP_EOL . '==============================');
 
         if ($this->defender->getHealth()->value() == 0) {
             $this->write(sprintf('<error>%s was killed!</error>', $this->defender->getName()));

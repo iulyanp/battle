@@ -15,11 +15,12 @@ class Hero extends Player
      *
      * @return array
      */
-    protected function strikeWithSkills($player, $defaultDamage)
+    protected function strikeWithSkills(PlayerInterface $player, $defaultDamage)
     {
         $damage = [];
         $this->attackUsedSkills = [];
         foreach ($this->getAttackSkills() as $skill) {
+            /** @var $skill Skill */
             $damage[] = $skill->getDamageWithActiveSkills($defaultDamage);
             if ($skill->wasUsed()) {
                 $this->attackUsedSkills[] = $skill;
@@ -34,13 +35,14 @@ class Hero extends Player
     /**
      * @param $defaultDamage
      *
-     * @return number
+     * @return Player
      */
     protected function defend($defaultDamage)
     {
         $damage = [];
         $this->defendUsedSkills = [];
         foreach ($this->getDefenceSkills() as $skill) {
+            /** @var $skill Skill */
             $damage[] = $skill->getDamageWithActiveSkills($defaultDamage);
             if ($skill->wasUsed()) {
                 $this->defendUsedSkills[] = $skill;
